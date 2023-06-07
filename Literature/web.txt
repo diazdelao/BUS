@@ -1,0 +1,10 @@
+Tutorial
+https://arxiv.org/pdf/2007.06823.pdf
+
+BNN in R
+https://rpubs.com/greyman/323557
+
+Theory
+https://www.cs.toronto.edu/~duvenaud/distill_bayes_net/public/
+
+Bishop
