@@ -1,5 +1,5 @@
 bnn <- function(X){
-     # Input X is a 3-dimensional standard Gaussian
+     # Input X is a 8-dimensional standard Gaussian
      
      ## Stiffnesses     
      #k1 <- 29.7e6
