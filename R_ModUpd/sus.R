@@ -18,7 +18,7 @@ sus <- function(x,n,p,d,YF){
      si <- sort( y[L+1,]) # sort output ASCENDING
      bi <- si
      ccdf <- prob_ratio*(p^L) # Eq.(2.9) in CBUS.
-     while(sum(nF)/n < p & L < 51){ 
+     while(sum(nF)/n < p & L < 11){ 
           L <- L + 1 
           print(paste('SuS Level = ',as.character(L)))
           nF <- append(nF,0) # vector of failure samples (per level)

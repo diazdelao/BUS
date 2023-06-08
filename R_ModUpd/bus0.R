@@ -15,9 +15,10 @@ bus0 <- function(x,n,p,d,exit.tol){
      for(i in 1:n){
             y[i] <- G(x[,i,1])
      }
-     while(ak > exit.tol & L < 51){
+     while(ak > exit.tol & L < 11){
           L <- L + 1 
           print(paste('BUS Level = ',as.character(L)))
+          print(paste('( Current tolerance = ',as.character(ak),')'))
           print('<============================================>')
           Bi <- sort(y[L,],index.return = T,decreasing = T) # sorted responses and indices    
           y[L,] <- y[L,Bi$ix]

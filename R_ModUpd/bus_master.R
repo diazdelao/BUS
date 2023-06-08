@@ -38,7 +38,7 @@ source('activation.R') # Activation function for BNN
 n <- 1e3 # number of samples
 p <- .1 # level probability
 d <- 8 # dimensions
-exit.tol <- 1e-6 # stopping condition tolerance
+exit.tol <- 1e-3 # stopping condition tolerance
 X <- array(0,dim = c(d,n,1)) 
 X[,,1] <- mvrnorm(n = n,mu = rep(0,d),Sigma = diag(d)) # initial samples
 
