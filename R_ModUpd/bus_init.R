@@ -13,9 +13,9 @@ library(cowplot) # for displaying graphs side by side
 #================================================================
 myComputer <- as.character(Sys.info()["nodename"])
 if(myComputer == 'ucl'){
-  setwd('/home/user/GitHub/BUS/ModUpd/')
+  setwd('/home/user/GitHub/BUS/R_ModUpd/')
 } else if(myComputer == 'xps13'){
-  setwd('/home/alej/GitHub/BUS/ModUpd/')
+  setwd('/home/alej/GitHub/BUS/R_ModUpd/')
 }
 
 # Load MMA, plotting functions, etc.
@@ -28,3 +28,8 @@ source('input_freq.R') # produces a table with frequencies of samples
 source('bus_example.R') # implements example from paper
 source('plot_trends.R') # Plots characteristic trends in paper
 source('plotsus2d.R') # Plots the samples
+source('bnn.R') # Bayesian Neural Network
+source('bnnLikelihood.R') # Likelihood for BNN
+source('prior.R') # Prior for BNN
+source('activation.R') # Activation function for BNN
+
