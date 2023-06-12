@@ -1,21 +1,15 @@
-bnn <- function(X){
+bnn <- function(X,Theta){
      # Input X is a 8-dimensional standard Gaussian
      
      # Data
      #<-===========================================================================
      x <- seq(.1,10,by<-.1)
      n <- length(x)
-     alpha1 <- 5  # true values of parameters 
-     alpha2 <- -5
-     beta1 <- -1
-     beta2 <- -3
-     gamma1 <- 5
-     gamma2 <- 2
-     sigma_eps <- 0.1 # std of the pediction-error
-     epsilon <- rnorm(n,0,1)*sigma_eps  # prediction-error
+     epsilon <- rnorm(n,0,1)*Theta[7]  # prediction-error
      y <- rep(0,n)
      for(i in 1:n){
-       y[i] <- alpha1*activation(beta1*x[i]+gamma1)+alpha2*activation(beta2*x[i]+gamma2)+epsilon[i];
+       #y[i] <- alpha1*activation(beta1*x[i]+gamma1)+alpha2*activation(beta2*x[i]+gamma2)+epsilon[i];
+       y[i] <- Theta[1]*activation(Theta[3]*x[i]+Theta[5])+Theta[2]*activation(Theta[4]*x[i]+Theta[6])+epsilon[i];
      }
      sigma_prior <- 5
      
