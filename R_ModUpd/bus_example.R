@@ -42,7 +42,7 @@ identif_y <- function(X){
      J <-  lambda1^2*((f1^2/f_tilde1^2)-1)^2 + lambda2^2*((f2^2/f_tilde2^2)-1)^2
      L <-  exp(-J/(2*sigma^2))
      
-     y <- log(L/u)
+     y <- log(L) - log(u)
      
      #return( list(y=y,L=L) ) 
      return(y) 
