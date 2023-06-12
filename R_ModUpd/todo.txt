@@ -2,6 +2,7 @@ In R
 ======
 1. Plot true vs estimated function
 2. Compute and plot autocorrelation
+3. epsilon is coming out negative, so something is obviously wrong. Check bnn.R line 8 and bnnLikelihood line 7.
 
 
 
