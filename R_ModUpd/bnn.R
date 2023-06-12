@@ -5,7 +5,7 @@ bnn <- function(X,Theta){
      #<-===========================================================================
      x <- seq(.1,10,by<-.1)
      n <- length(x)
-     epsilon <- rnorm(n,0,1)*Theta[7]  # prediction-error
+     epsilon <- rnorm(n,0,1)*exp(-Theta[7]/2)  # prediction-error
      y <- rep(0,n)
      for(i in 1:n){
        #y[i] <- alpha1*activation(beta1*x[i]+gamma1)+alpha2*activation(beta2*x[i]+gamma2)+epsilon[i];
