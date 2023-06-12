@@ -7,8 +7,11 @@ bnnLikelihood <- function(theta,x,y,n,sigma_prior){
      a[i] <- dnorm(mu[i],0,exp(-theta[7]/2));
    }
   
-  z <- -sum(log(a));
-  z <- z + prior(theta,sigma_prior) + 100;
+  z <- sum(log(a))
+  z <- exp(z)
+  #z <- prod(a)
+  #z <- -sum(log(a))
+  #z <- z + prior(theta,sigma_prior) + 100
   
   return(z)
 }

@@ -27,7 +27,7 @@ bnn <- function(X){
      u <- pnorm(X[1],0,1) # map to uniform space
      
      #y <- log(Ltheta/u)
-     y <- log(Ltheta) - log(u)
+     y <- log(Ltheta) - log(u) # for ease of computation
      
      return(y) 
 }
