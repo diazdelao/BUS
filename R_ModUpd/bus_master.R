@@ -33,12 +33,15 @@ source('bnn.R') # Bayesian Neural Network
 source('bnnLikelihood.R') # Likelihood for BNN
 source('prior.R') # Prior for BNN
 source('activation.R') # Activation function for BNN
+source('predNeuralNet.R')
+source('plot_predNN.R')
 
 # Parameters for BUS
 #==========================================================================
 d <- 8 # dimensions
+flag.pred.nn <- 0
 
-exit.tol <- 1e-6 # stopping condition tolerance
+exit.tol <- 1e-3 # stopping condition tolerance
 n <- 1e3 # number of samples
 p <- .1 # level probability
 X <- array(0,dim = c(d,n,1)) 
@@ -71,6 +74,17 @@ XL_df <- as.data.frame(t(XL))
 plot.scatt <- ggpairs(XL_df)
 #print(plot.scatt)
 
+# Neural net prediction
+
+if(flag.pred.nn == 1){
+  par(mfrow=c(1,1))
+  plot_predNN(XL_df)
+}
+
 # Characteristic trends
+
 par(mfrow=c(2,1))
 plot_trends(B$bi,B$ccdf,B$Yi,B$L)
+
+
+print(colMeans(XL_df))
