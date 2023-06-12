@@ -36,11 +36,11 @@ source('activation.R') # Activation function for BNN
 
 # Parameters for BUS
 #==========================================================================
-d <- 3 # dimensions
+d <- 8 # dimensions
 
+exit.tol <- 1e-6 # stopping condition tolerance
 n <- 1e3 # number of samples
 p <- .1 # level probability
-exit.tol <- 1e-3 # stopping condition tolerance
 X <- array(0,dim = c(d,n,1)) 
 X[,,1] <- mvrnorm(n = n,mu = rep(0,d),Sigma = diag(d)) # initial samples
 
@@ -69,7 +69,7 @@ print(plot.all_levels)
 XL <- B$x[2:d,,B$L+1] # samples from last level
 XL_df <- as.data.frame(t(XL))
 plot.scatt <- ggpairs(XL_df)
-print(plot.scatt)
+#print(plot.scatt)
 
 # Characteristic trends
 par(mfrow=c(2,1))
