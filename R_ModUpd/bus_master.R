@@ -5,6 +5,7 @@ rm(list = ls()) # clear memory
 library(MASS) # for multivariate normals
 library(abind) # to combine multidimensional arrays
 library(ggplot2)
+library(GGally) # to create scatterplot matrix
 library(data.table) # calls setDT to produce table of unique samples, also for melt()
 library(dplyr)
 library(cowplot) # for displaying graphs side by side
@@ -35,9 +36,10 @@ source('activation.R') # Activation function for BNN
 
 # Parameters for BUS
 #==========================================================================
+d <- 3 # dimensions
+
 n <- 1e3 # number of samples
 p <- .1 # level probability
-d <- 8 # dimensions
 exit.tol <- 1e-3 # stopping condition tolerance
 X <- array(0,dim = c(d,n,1)) 
 X[,,1] <- mvrnorm(n = n,mu = rep(0,d),Sigma = diag(d)) # initial samples
@@ -58,9 +60,16 @@ print(my.time[3]) # print elapsed time
 #==========================================================================
 #  Plot all samples
 
-Xall <- B$x[2:3,,] # discard first dimension since it's used to produce uniform samples
+Xall <- B$x[2:d,,] # discard first dimension since it's used to produce uniform samples
 plot.all_levels <- plotsus2d(Xall,B$L,B$Yi,d=2)
 print(plot.all_levels)
+
+# Scatterplots
+
+XL <- B$x[2:d,,B$L+1] # samples from last level
+XL_df <- as.data.frame(t(XL))
+plot.scatt <- ggpairs(XL_df)
+print(plot.scatt)
 
 # Characteristic trends
 par(mfrow=c(2,1))
