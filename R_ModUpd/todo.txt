@@ -1,0 +1,10 @@
+In R
+======
+1. Plot true vs estimated function
+2. Compute and plot autocorrelation
+
+
+
+In Matlab
+==========
+1. Translate from R
