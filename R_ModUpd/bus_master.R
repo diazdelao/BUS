@@ -39,9 +39,9 @@ source('plot_predNN.R')
 # Parameters for BUS
 #==========================================================================
 d <- 8 # dimensions
-flag.pred.nn <- 0
+flag.pred.nn <- 1
 
-exit.tol <- 1e-3 # stopping condition tolerance
+exit.tol <- 1e-2 #stopping condition tolerance
 n <- 1e3 # number of samples
 p <- .1 # level probability
 X <- array(0,dim = c(d,n,1)) 
@@ -72,7 +72,7 @@ print(plot.all_levels)
 XL <- B$x[2:d,,B$L+1] # samples from last level
 XL_df <- as.data.frame(t(XL))
 plot.scatt <- ggpairs(XL_df)
-#print(plot.scatt)
+print(plot.scatt)
 
 # Neural net prediction
 

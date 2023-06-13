@@ -1,4 +1,4 @@
-bnnLikelihood <- function(theta,x,y,n,sigma_prior){
+bnnLikelihood <- function(theta,x,y,n){
   
   mu <- seq(0,n)
   a <- seq(0,n)

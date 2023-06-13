@@ -8,7 +8,6 @@ ypred <- matrix(0,nrow=1000,ncol=nx) #1000 x 100
 # Function with estimated values
 for(i in 1:ncol(ypred)){
   theta.est <- myX[i,]
-  print(i)
   ypred[,i] <- unlist(predNeuralNet(theta.est)[[2]])
 }
 
