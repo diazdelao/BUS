@@ -5,7 +5,7 @@ bnn <- function(X,Theta){
      u <- pnorm(X[1],0,1) # map to uniform space
      
      sigma_prior <- 5
-     #X[2:8] <- sigma_prior*X[2:8]
+     #X[2:7] <- sigma_prior*X[2:7]
      
      # Data
      #<-===========================================================================
