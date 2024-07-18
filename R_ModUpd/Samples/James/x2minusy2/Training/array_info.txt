@@ -1,0 +1,4 @@
+Length array 1 : 1000 , Threshold: 5.4 
+Length array 3 : 504 , Threshold: 13.85 
+Length array 5 : 419 , Threshold: 21.18 
+Length array 7 : 416 , Threshold: 26 

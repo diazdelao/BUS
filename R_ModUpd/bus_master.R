@@ -15,8 +15,10 @@ library(cowplot) # for displaying graphs side by side
 myComputer <- as.character(Sys.info()["nodename"])
 if(myComputer == 'ucl'){
   setwd('/home/user/GitHub/BUS/R_ModUpd/')
-} else if(myComputer == 'xps13'){
-  setwd('/home/alej/GitHub/BUS/R_ModUpd/')
+#} else if(myComputer == 'xps13'){
+#  setwd('/home/alej/GitHub/BUS/R_ModUpd/')
+} else if(myComputer == 'Alexs-MacBook-Air.local'){
+  setwd('/Users/diazdelao/GitHub/BUS/R_ModUpd/')
 }
 
 # Load MMA, plotting functions, etc.

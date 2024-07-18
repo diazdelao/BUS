@@ -1,0 +1,5 @@
+Points in array 1 : 1000 , Threshold: 0.03 
+Points in array 2 : 382 , Threshold: 0.05 
+Points in array 3 : 182 , Threshold: 0.09 
+Points in array 4 : 285 , Threshold: 0.11 
+Points in array 5 : 256 , Threshold: 0.12 
